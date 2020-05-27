@@ -246,6 +246,7 @@ async function runOrUpdate(event: AWSCDKAsyncCustomResource.OnEventRequest): Pro
         input = undefined;
       }
     }
+    console.log(`FINAL input: ${input}`);
     const startExecution = await sf.startExecution({
       stateMachineArn,
       name: `DeploymentManager-${event.RequestId}-${currentRunTime}`,
