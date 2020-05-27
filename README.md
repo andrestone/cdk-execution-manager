@@ -11,7 +11,7 @@ Install:
 
 ```typescript
 import * as sfn from '@aws-cdk/aws-stepfunctions'
-import { DeploymentManager } from "cdk-deployment-manager";
+import { DeploymentManager } from "cdk-execution-manager";
 
 const task1 = new stepfunctions.Pass(stack, 'State One');
 const task2 = new stepfunctions.Pass(stack, 'State Two');

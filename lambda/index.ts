@@ -237,11 +237,12 @@ async function runOrUpdate(event: AWSCDKAsyncCustomResource.OnEventRequest): Pro
     if (input) {
       try {
         const inputObj = JSON.parse(input);
-        if (!Object.keys(inputObj).indexOf("resumeTo")) {
+        if (Object.keys(inputObj).indexOf("resumeTo") < 0) {
           inputObj.resumeTo = "";
           input = JSON.stringify(inputObj);
         }
-      } catch {
+      } catch (e) {
+        console.log(e);
         input = undefined;
       }
     }
