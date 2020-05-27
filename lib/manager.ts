@@ -34,13 +34,13 @@ interface inputProps {
      * The state to resume to.
      *
      */
-    readonly resumeTo: string;
+    readonly resumeTo?: string;
 
     /**
      * Other inputs
      *
      */
-    readonly [name: string]: string | {[name: string]: string};
+    readonly [name: string]: string | undefined;
 }
 
 
